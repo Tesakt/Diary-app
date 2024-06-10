@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph.xml"
+    app:startDestination="@id/DiaryListFragment">
+
+    <fragment
+        android:id="@+id/DiaryListFragment"
+        android:name="com.example.mydiary.DiaryListFragment"
+        android:label="DiaryListFragment"
+        tools:layout="@layout/fragment_diary_list">
+
+        <action
+            android:id="@+id/action_diaryListFragment_to_addEntryFragment"
+            app:destination="@id/addEntryFragment" />
+        <action
+            android:id="@+id/action_diaryListFragment_to_displayEntryFragment"
+            app:destination="@id/displayEntryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEntryFragment"
+        android:name="com.example.mydiary.AddEntryFragment"
+        android:label="fragment_add_entry"
+        tools:layout="@layout/fragment_add_entry">
+        <argument
+            android:name="entryToEdit"
+            android:defaultValue="@null"
+            app:argType="com.example.mydiary.data.Entry"
+            app:nullable="true" />
+        <argument
+            android:name="edit"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/displayEntryFragment"
+        android:name="com.example.mydiary.DisplayEntryFragment"
+        android:label="fragment_display_entry"
+        tools:layout="@layout/fragment_display_entry">
+        <argument
+            android:name="entry"
+            app:argType="com.example.mydiary.data.Entry" />
+        <action
+            android:id="@+id/action_displayEntryFragment_to_addEntryFragment"
+            app:destination="@id/addEntryFragment" />
+        <action
+            android:id="@+id/action_displayEntryFragment_to_diaryListFragment"
+            app:destination="@id/DiaryListFragment" />
+    </fragment>
+</navigation>

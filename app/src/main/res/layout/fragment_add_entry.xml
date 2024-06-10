@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addTaskLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEntryFragment">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="360dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/enter_diary_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/titleInput"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/title"
+        app:layout_constraintEnd_toStartOf="@+id/saveButton"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label" />
+
+    <EditText
+        android:id="@+id/descriptionInput"
+        android:layout_width="375dp"
+        android:layout_height="175dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="@string/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleInput"/>
+
+    <RadioGroup
+        android:id="@+id/moodGroup"
+        android:layout_width="343dp"
+        android:layout_height="172dp"
+        android:layout_marginStart="20dp"
+        android:addStatesFromChildren="false"
+        android:checkedButton="@id/neutral_radioButton"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodLabel">
+
+        <RadioButton
+            android:id="@+id/happy_radioButton"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="@string/happy_mood"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="631dp" />
+
+        <RadioButton
+            android:id="@+id/sad_radioButton"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="@string/sad_mood"
+            app:layout_constraintEnd_toStartOf="@+id/normal_radioButton"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="631dp" />
+
+        <RadioButton
+            android:id="@+id/angry_radioButton"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="@string/angry_mood"
+            app:layout_constraintEnd_toStartOf="@+id/normal_radioButton"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="631dp" />
+
+        <RadioButton
+            android:id="@+id/crying_radioButton"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="@string/crying_mood"
+            app:layout_constraintEnd_toStartOf="@+id/normal_radioButton"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="631dp" />
+
+        <RadioButton
+            android:id="@+id/love_radioButton"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="@string/lovely_mood"
+            tools:layout_editor_absoluteX="160dp"
+            tools:layout_editor_absoluteY="631dp" />
+
+        <RadioButton
+            android:id="@+id/neutral_radioButton"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="@string/neutral_mood"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/normal_radioButton"
+            tools:layout_editor_absoluteY="631dp" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/moodLabel"
+        android:layout_width="125dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/mood"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entryDate" />
+
+    <ImageButton
+        android:id="@+id/saveButton"
+        android:layout_width="57dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@string/save_button"
+        android:src="@android:drawable/ic_menu_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label" />
+
+    <CalendarView
+        android:id="@+id/entryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateInput"/>
+
+    <TextView
+        android:id="@+id/dateInput"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/enter_date_of_diary_entry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

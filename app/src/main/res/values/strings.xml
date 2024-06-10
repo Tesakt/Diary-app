@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">myDiary</string>
+    <string name="my_diary_entry">my diary entry</string>
+    <string name="mood">Your mood:</string>
+    <string name="addbutton">addButton</string>
+    <string name="enter_diary_details">Enter diary details:</string>
+    <string name="title">title</string>
+    <string name="description">description</string>
+    <string name="happy_mood">happy</string>
+    <string name="sad_mood">sad</string>
+    <string name="angry_mood">angry</string>
+    <string name="crying_mood">crying</string>
+    <string name="lovely_mood">lovely</string>
+    <string name="neutral_mood">neutral</string>
+    <string name="save_button">save_button</string>
+    <string name="enter_date_of_diary_entry">Enter date of diary entry:</string>
+    <string name="default_diary_title">My diary entry</string>
+    <string name="no_desc_msg">No description</string>
+    <string name="date">Date</string>
+    <string name="your_diary_entry">Your diary entry:</string>
+    <string name="entrydescription">EntryDescription</string>
+    <string name="here_lies_your_title">Here lies your title</string>
+</resources>
